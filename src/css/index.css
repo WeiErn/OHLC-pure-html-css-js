@@ -1,0 +1,156 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+header {
+    background-color: maroon;
+    font-size: 1rem;
+    padding: 15px;
+    margin: 2px;
+    color: white;
+    font-family: arial;
+    border-radius: 4px 4px 0 0;
+}
+
+.wrapper {
+    margin: 0 0;
+    min-width: 900px;
+}
+
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav {
+    width: 200px;
+    float: left;
+    display: inline;
+}
+
+    nav a {
+        display: block;
+        width: 200px;
+        text-align: left;
+        padding: 15px;
+        background-color: #a5ffcb;
+        margin: 2px;
+        font-family: Arial;
+        color: rgba(188,190,194,1);
+        font-size: 1rem;
+    }
+
+section {
+    /*display: inline-block;*/
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    clear: both;
+    background-color: black;
+    font-size: 0.8rem;
+    padding: 8px;
+    color: white;
+    font-family: arial;
+    border-radius: 4px 4px 0 0;
+}
+
+
+.graph {
+    /*height: 500px;*/
+    /*width: 800px;*/
+}
+
+    .graph .labels.x-labels {
+        text-anchor: middle;
+    }
+
+    .graph .labels.y-labels {
+        text-anchor: end;
+    }
+
+    /*.graph .grid {*/
+        /*stroke: #ccc;*/
+        /*stroke-dasharray: 0;*/
+        /*stroke-width: 1;*/
+    /*}*/
+
+.labels {
+    font-size: 13px;
+}
+
+.label-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    fill: black;
+}
+
+.bear {
+    stroke: red;
+    stroke-dasharray: 0;
+    stroke-width: 3;
+}
+
+.bull {
+    stroke: limegreen;
+    stroke-dasharray: 0;
+    stroke-width: 3;
+}
+
+.axis {
+    stroke: #ccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
