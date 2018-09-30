@@ -1,13 +1,13 @@
 import createLine from './line';
 const svgNS = "http://www.w3.org/2000/svg";
 
-function createYLabel (labelClass, height, graph, yMin, yMax) {
+function createYLabel (labelClass, height, yMin, yMax, stepSize, graph) {
 
   const labelGroup = document.createElementNS(svgNS, 'g');
   labelGroup.classList.add('labels');
   labelGroup.classList.add(labelClass);
 
-  const numOfIntervals = (yMax-yMin)/10 + 1;
+  const numOfIntervals = (yMax-yMin)/stepSize + 1;
   const incr = height / numOfIntervals;
   let y = 26;
 
@@ -17,7 +17,7 @@ function createYLabel (labelClass, height, graph, yMin, yMax) {
     // add text
     text.setAttribute('x', '70');
     text.setAttribute('y', `${y}`);
-    text.textContent = `${yMax-i*10}`;
+    text.textContent = `${yMax-i*stepSize}`;
 
     labelGroup.appendChild(text);
 

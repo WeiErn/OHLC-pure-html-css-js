@@ -1,7 +1,7 @@
 import loadJSON from "./retrieveData";
 import createSymbol from './symbol';
 
-function drawSymbols (width, height, yMin, yMax, plot) {
+function drawSymbols (width, height, yMin, yMax, stepSize, plot) {
 
   loadJSON(function (response) {
 
@@ -13,7 +13,7 @@ function drawSymbols (width, height, yMin, yMax, plot) {
     const xIncr = 20;
     const xStart = 97;
     let x = xStart;
-    const yPerUnitValue = height/(yMax - yMin + 10);
+    const yPerUnitValue = height/(yMax - yMin + stepSize);
 
     for (const day in timeSeriesData) {
       let stock = timeSeriesData[day];

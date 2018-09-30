@@ -22,10 +22,12 @@ function createSymbol(trendClass, plot, x, open, high, low, close) {
   const openEl = createOpenEl(`${x}`, `${x+8}`, open);
   const highLowEl = createHighLowEl(`${x+8}`, high, low);
   const closeEl = createCloseEl(`${x+8}`, `${x+16}`, close);
+  const guideLine = createLine('guide-line', `${x+8}`, `${x+8}`, '5', '370');
 
   symbol.appendChild(openEl);
   symbol.appendChild(highLowEl);
   symbol.appendChild(closeEl);
+  symbol.appendChild(guideLine);
   plot.appendChild(symbol);
 }
 

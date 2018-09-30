@@ -26,8 +26,9 @@ function init() {
 
   const width = '900px';
   const height = '400px';
-  const yMin = 110;
-  const yMax = 120;
+  const yMin = 105;
+  const yMax = 116;
+  const stepSize = 1;
 
   // Create graph
   const graph = createGraph(width, height);
@@ -35,11 +36,11 @@ function init() {
   createAxis('x-axis', 615, 0, graph);
 
   // Create Y Label and Ticks
-  createYLabel('y-labels', 365, graph, yMin, yMax);
+  createYLabel('y-labels', 365, yMin, yMax, stepSize, graph);
 
   // Create Plot
   const plot = createPlot();
-  drawSymbols(615, 365, yMin, yMax, plot);
+  drawSymbols(615, 365, yMin, yMax, stepSize, plot);
   graph.appendChild(plot);
   document.getElementsByTagName('section')[0].appendChild(graph);
 
