@@ -1,7 +1,5 @@
-import loadJSON from './retrieveData';
 import createAxis from './axis';
 import createYLabel from './label';
-import createSymbol from './symbol';
 import drawSymbols from './drawSymbols';
 const svgNS = "http://www.w3.org/2000/svg";
 
@@ -33,7 +31,6 @@ function init() {
 
   // Create graph
   const graph = createGraph(width, height);
-  // const graph = document.getElementsByClassName('graph')[0];
   createAxis('y-axis', 0, 365, graph);
   createAxis('x-axis', 615, 0, graph);
 
@@ -42,8 +39,6 @@ function init() {
 
   // Create Plot
   const plot = createPlot();
-  // const plot = document.getElementsByClassName('plot')[0];
-  // createSymbol('bear', plot);
   drawSymbols(615, 365, yMin, yMax, plot);
   graph.appendChild(plot);
   document.getElementsByTagName('section')[0].appendChild(graph);

@@ -1,26 +1,6 @@
 import createLine from './line';
 const svgNS = "http://www.w3.org/2000/svg";
 
-// function createLabel (labelId, x, y, width, height, graph) {
-//   const labelGroup = document.createElementNS(svgNS, 'g');
-//   labelGroup.classList.add('label-group');
-//   labelGroup.setAttribute('id', labelId);
-//
-//   if (!width && width > 0) {
-//
-//   }
-//
-//   const label = document.createElementNS(svgNS, 'line');
-//   label.classList.add('label');
-//   label.setAttribute('x1', '90');
-//   label.setAttribute('x2', `${90+width}`);
-//   label.setAttribute('y1', `${370-height}`);
-//   label.setAttribute('y2', '370');
-//
-//   labelGroup.appendChild(label);
-//   graph.appendChild(labelGroup)
-// }
-
 function createYLabel (labelClass, height, graph, yMin, yMax) {
 
   const labelGroup = document.createElementNS(svgNS, 'g');

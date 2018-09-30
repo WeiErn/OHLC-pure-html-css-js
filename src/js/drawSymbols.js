@@ -15,16 +15,6 @@ function drawSymbols (width, height, yMin, yMax, plot) {
     let x = xStart;
     const yPerUnitValue = height/(yMax - yMin + 10);
 
-    // const open = y + (200 - 100) * yPerUnitValue;
-    // const high = y + (200 - 200) * yPerUnitValue;
-    // const low = y + (200 - 30) * yPerUnitValue;
-    // const close = y + (200 - 50) * yPerUnitValue;
-    //
-    // for (let i = 0; i < 4; i++) {
-    //   createSymbol('bull', plot, x, open, high, low, close);
-    //   x = x + 20;
-    // }
-
     for (const day in timeSeriesData) {
       let stock = timeSeriesData[day];
       console.log(stock);
@@ -34,10 +24,8 @@ function drawSymbols (width, height, yMin, yMax, plot) {
       const close = y + (yMax - parseFloat(stock['4. close'])) * yPerUnitValue;
 
       if (parseFloat(stock['4. close']) > parseFloat(stock['1. open'])) {
-        // stock.trend = 'bull'
         createSymbol('bull', plot, x, open, high, low, close);
       } else if (parseFloat(stock['4. close']) < parseFloat(stock['1. open'])) {
-        // stock.trend = 'bear'
         createSymbol('bear', plot, x, open, high, low, close);
       }
 
